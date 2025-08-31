@@ -1,0 +1,270 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* App container */
+.app-container {
+    min-height: 100vh;
+    background-color: white;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 0 100px 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Navigation Header */
+.navigation-header {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.nav-item {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    color: #000000;
+    flex-shrink: 0;
+    line-height: 0;
+}
+
+.nav-item:hover {
+    color: #2563eb;
+}
+
+.nav-item.active {
+    color: #2563eb;
+}
+
+.nav-item p {
+    line-height: normal;
+    white-space: pre;
+}
+
+.logo-container {
+    width: 61px;
+    height: 61px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Main Section */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: auto;
+}
+
+/* Welcome Title */
+.welcome-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    line-height: 0;
+    color: #000000;
+    flex-shrink: 0;
+    width: auto;
+}
+
+.welcome-text {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    width: min-content;
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.welcome-text p {
+    line-height: normal;
+}
+
+.society-name {
+    font-family: 'ITC Avant Garde Gothic', 'Arial Black', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 40px;
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.society-name p {
+    line-height: normal;
+    white-space: pre;
+}
+
+/* Description */
+.description {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    height: 36px;
+    line-height: 0;
+    flex-shrink: 0;
+}
+
+.description p {
+    line-height: normal;
+}
+
+/* Spacer */
+.spacer {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    height: 36px;
+    line-height: normal;
+    flex-shrink: 0;
+}
+
+.spacer p {
+    margin-bottom: 0;
+}
+
+/* Events Button */
+.events-button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 20px;
+    background-color: #a9e1eb;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.events-button:hover {
+    background-color: #8bd4e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.button-text {
+    font-family: 'ITC Avant Garde Gothic', 'Arial Black', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    color: #000000;
+    white-space: nowrap;
+    line-height: 0;
+    flex-shrink: 0;
+}
+
+.button-text p {
+    line-height: normal;
+    white-space: pre;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navigation-header {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-item {
+        font-size: 11px;
+    }
+    
+    .logo-container {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .society-name {
+        font-size: 32px;
+    }
+    
+    .welcome-text {
+        font-size: 16px;
+    }
+    
+    .main-content {
+        gap: 50px;
+        padding: 5px 20px 50px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation-header {
+        gap: 12px;
+    }
+    
+    .nav-item {
+        font-size: 10px;
+    }
+    
+    .logo-container {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .society-name {
+        font-size: 24px;
+    }
+    
+    .welcome-text {
+        font-size: 14px;
+    }
+    
+    .description {
+        font-size: 11px;
+    }
+}
