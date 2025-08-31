@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors 'self' https://campusgroups.rit.edu https://*.campusgroups.com https://*.rit.edu"
+        }
+      ]
+    }
+  ]
+}
